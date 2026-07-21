@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProjectTrack — Project & Billing Tracker</title>
+    <meta name="description" content="A static project & billing tracker (demo data, no backend)." />
+    <script>
+      // Apply saved theme before paint to avoid a flash.
+      try {
+        var t = localStorage.getItem('pt-theme');
+        var d = document.documentElement;
+        d.classList.remove('light', 'dark');
+        d.classList.add(t === 'dark' ? 'dark' : 'light');
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
